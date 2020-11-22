@@ -4,4 +4,7 @@ project(Dijkstra)
 
 aux_source_directory(. SRC_LIST)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-add_executable(Dijkstra ${SRC_LIST})
+add_executable(dijkstra ${SRC_LIST})
+
+# INSTALL
+install(TARGETS dijkstra DESTINATION bin)

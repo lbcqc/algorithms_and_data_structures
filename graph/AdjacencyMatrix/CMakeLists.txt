@@ -32,3 +32,9 @@ target_link_libraries(adjacency_matrix_unittest PUBLIC
 )
 
 add_test(adjacency_matrix adjacency_matrix_unittest)
+
+# INSTALL
+install(TARGETS adjacency_matrix_demo RUNTIME DESTINATION bin)
+install(TARGETS adjacency_matrix_unittest RUNTIME DESTINATION bin)
+install(TARGETS adjacency_matrix ARCHIVE DESTINATION lib)
+install(DIRECTORY include/ DESTINATION include/AdjacencyMatrix)
