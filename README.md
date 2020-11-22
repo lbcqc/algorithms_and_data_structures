@@ -8,7 +8,39 @@
 - dockerfile 创建编译测试环境
 - cpack 创建安装包
 
-## 图
+## 编译
+
+### CMake 本地源码编译
+
+```bash
+# 下载源码
+git clone https://github.com/lbcqc/algorithms_and_data_structures.git
+cd algorithms_and_data_structures
+# 编译
+mkdir build && cd build
+cmake .. && make
+# 执行单元测试
+cd build && make test
+```
+
+### Dockerfile 镜像编译
+
+```bash
+# 下载源码
+git clone https://github.com/lbcqc/algorithms_and_data_structures.git
+cd algorithms_and_data_structures
+# 创建镜像
+docker build -t algorithms_and_data_structures .
+# 创建容器
+docker run -itd --name alg_ds_test algorithms_and_data_structures /usr/sbin/init
+# 执行单元测试
+docker exec -ti alg_ds_test bash
+cd build && make test
+```
+
+## 源码
+
+### 图
 
 - [邻接矩阵](https://github.com/lbcqc/algorithms_and_data_structures/tree/master/graph/AdjacencyMatrix)
 - [迪杰斯特拉](https://github.com/lbcqc/algorithms_and_data_structures/tree/master/graph/Dijkstra)
