@@ -10,7 +10,5 @@
 
 ## 图
 
-- [邻接矩阵]()
-- [邻接链表]()
-- [迪杰斯特拉]()
-
+- [邻接矩阵](https://github.com/lbcqc/algorithms_and_data_structures/tree/master/graph/AdjacencyMatrix)
+- [迪杰斯特拉](https://github.com/lbcqc/algorithms_and_data_structures/tree/master/graph/Dijkstra)
