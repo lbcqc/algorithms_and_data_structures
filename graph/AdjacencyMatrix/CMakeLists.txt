@@ -38,3 +38,10 @@ install(TARGETS adjacency_matrix_demo RUNTIME DESTINATION bin)
 install(TARGETS adjacency_matrix_unittest RUNTIME DESTINATION bin)
 install(TARGETS adjacency_matrix ARCHIVE DESTINATION lib)
 install(DIRECTORY include/ DESTINATION include/AdjacencyMatrix)
+
+# cppchec
+if (CPPCHECK_FOUND)
+	aux_source_directory(src/ SRC_LIST)
+	include(${CMAKE_SOURCE_DIR}/cmake/analysis.cmake)
+	add_analysis(${PROJECT_NAME} SRC_LIST)
+endif()

@@ -8,3 +8,9 @@ add_executable(dijkstra ${SRC_LIST})
 
 # INSTALL
 install(TARGETS dijkstra DESTINATION bin)
+
+# cppcheck
+if (CPPCHECK_FOUND)
+	include(${CMAKE_SOURCE_DIR}/cmake/analysis.cmake)
+	add_analysis(${PROJECT_NAME} SRC_LIST)
+endif()
